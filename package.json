@@ -1,0 +1,1 @@
+{"name":"todolist","version":"1.0.0","main":"index.js","license":"MIT","scripts":{"server":"node Server/index.js","client":"npm run dev --prefix todolist","dev":"concurrently \"npm run server\" \"npm run client\""},"devDependencies":{"concurrently":"^9.2.0"},"dependencies":{"bcryptjs":"^3.0.2","dotenv":"^17.2.1","jsonwebtoken":"^9.0.2"}}
