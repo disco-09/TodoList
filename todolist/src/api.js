@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://todolist-rboh.onrender.com/api", // Updated to Render backend
+  baseURL: "https://todolist-1-zbap.onrender.com/api", // Correct Render backend URL
 });
 
 API.interceptors.request.use(config => {
