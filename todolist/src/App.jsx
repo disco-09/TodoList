@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -10,22 +10,24 @@ function App() {
   const token = localStorage.getItem("token");
 
   return (
-    <div className="container">
-      <Routes>
-        {/* Home page */}
-        <Route path="/" element={<Home />} />
+    <BrowserRouter basename="/todolist">
+      <div className="container">
+        <Routes>
+          {/* Home page */}
+          <Route path="/" element={<Home />} />
 
-        {/* Auth pages */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+          {/* Auth pages */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
 
-        {/* Dashboard only if logged in */}
-        <Route
-          path="/dashboard"
-          element={token ? <Dashboard /> : <Navigate to="/login" />}
-        />
-      </Routes>
-    </div>
+          {/* Dashboard only if logged in */}
+          <Route
+            path="/dashboard"
+            element={token ? <Dashboard /> : <Navigate to="/login" />}
+          />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
