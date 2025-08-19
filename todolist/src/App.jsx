@@ -10,23 +10,16 @@ function App() {
   const token = localStorage.getItem("token");
 
   return (
-    <BrowserRouter basename="/todolist">
-      <div className="container">
-        <Routes>
-          {/* Home page */}
-          <Route path="/" element={<Home />} />
-
-          {/* Auth pages */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-
-          {/* Dashboard only if logged in */}
-          <Route
-            path="/dashboard"
-            element={token ? <Dashboard /> : <Navigate to="/login" />}
-          />
-        </Routes>
-      </div>
+    <BrowserRouter basename="/TodoList">  {/* <-- Important */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route
+          path="/dashboard"
+          element={token ? <Dashboard /> : <Navigate to="/login" />}
+        />
+      </Routes>
     </BrowserRouter>
   );
 }
