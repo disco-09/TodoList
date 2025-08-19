@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: mode === 'production' ? '/todolist/' : '/', // Production = GitHub Pages, Dev = Local
+  base: mode === 'production' ? '/TodoList/' : '/', // Repo name, case-sensitive
 }))
