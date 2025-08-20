@@ -8,8 +8,10 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+
     "predeploy": "npm run build && node -e \"const fs=require('fs');fs.copyFileSync('dist/index.html','dist/404.html')\"",
-    "deploy": "npm run build && rm -rf docs && mv dist docs"
+
+    "deploy": "npm run predeploy && rm -rf ../docs && cp -r dist ../docs"
   },
   "dependencies": {
     "axios": "^1.11.0",
