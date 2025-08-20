@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import API from "../api";
-import "./Auth.css"; // shared css for login & register
+import "./Register.css"; // shared css for login & register
 
 export default function Register({ onBack }) {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
