@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import API from "../api";
-import "./Auth.css";
+import "./Login.css";
 
 export default function Login({ onBack, onLoginSuccess }) {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -12,16 +12,17 @@ export default function Login({ onBack, onLoginSuccess }) {
     try {
       const res = await API.post("/auth/login", form);
       localStorage.setItem("token", res.data.token);
-      if (onLoginSuccess) onLoginSuccess(res.data.user);  // <-- pass user info here
+      if (onLoginSuccess) onLoginSuccess(res.data.user); // pass user info
     } catch (err) {
       alert(err.response?.data?.message || "Login failed");
     }
   };
 
   return (
-    <div className="form-container">
-      <h2>Login</h2>
-      <form onSubmit={submit} className="form">
+    <div className="login-container">
+      <h2 className="login-title">Login</h2>
+
+      <form onSubmit={submit} className="login-form">
         <input
           name="email"
           type="email"
@@ -29,6 +30,7 @@ export default function Login({ onBack, onLoginSuccess }) {
           value={form.email}
           onChange={change}
           required
+          className="login-input"
         />
         <input
           name="password"
@@ -37,15 +39,13 @@ export default function Login({ onBack, onLoginSuccess }) {
           value={form.password}
           onChange={change}
           required
+          className="login-input"
         />
-        <button type="submit">Login</button>
+        <button type="submit" className="login-btn">Login</button>
       </form>
 
       {onBack && (
-        <button
-          style={{ marginTop: "10px", background: "gray", color: "white" }}
-          onClick={onBack}
-        >
+        <button onClick={onBack} className="back-btn">
           Back
         </button>
       )}

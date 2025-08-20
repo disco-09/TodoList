@@ -17,14 +17,20 @@ export default function Dashboard() {
     }
   };
 
-  useEffect(() => { fetchTodos(); }, []);
+  useEffect(() => {
+    fetchTodos();
+  }, []);
 
   return (
-    <div>
+    <div className="dashboard">
       <h2>Your Todos</h2>
-      <Create onCreated={fetchTodos} />
-      <ul>
-        {todos.map(t => <TodoItem key={t._id} todo={t} onChange={fetchTodos} />)}
+      <div className="todo-create">
+        <Create onCreated={fetchTodos} />
+      </div>
+      <ul className="todo-list">
+        {todos.map((t) => (
+          <TodoItem key={t._id} todo={t} onChange={fetchTodos} />
+        ))}
       </ul>
     </div>
   );

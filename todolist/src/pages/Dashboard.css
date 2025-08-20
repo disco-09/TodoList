@@ -1,23 +1,13 @@
-/* Dashboard.css */
-
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f5f7fa;
-  color: #333;
-}
-
 .dashboard {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
-  padding: 20px;
+  padding: 30px 20px;
 }
 
 .dashboard h2 {
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
   color: #2c3e50;
 }
 
@@ -33,7 +23,7 @@ ul {
 
 ul li {
   background: #ffffff;
-  margin: 10px 0;
+  margin: 12px 0;
   padding: 15px 20px;
   border-radius: 12px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.08);
@@ -47,18 +37,9 @@ ul li:hover {
   transform: scale(1.02);
 }
 
-/* Responsive Styles */
+/* Responsive */
 @media (max-width: 600px) {
-  .dashboard {
-    padding: 10px;
-  }
-
-  .dashboard h2 {
-    font-size: 1.5rem;
-  }
-
   ul li {
-    padding: 12px 15px;
     flex-direction: column;
     align-items: flex-start;
   }

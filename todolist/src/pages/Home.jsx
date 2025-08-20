@@ -21,11 +21,12 @@ function Home() {
 
   return (
     <div className="home-container">
+      {/* HEADER */}
       <header className="home-header">
         <h1 className="app-name">My ToDo List</h1>
         {user ? (
           <nav className="nav-links">
-            <span style={{ marginRight: 12 }}>{user.name}</span>
+            <span className="user-name">{user.name}</span>
             <button onClick={handleLogout} className="nav-btn">Logout</button>
           </nav>
         ) : (
@@ -36,29 +37,42 @@ function Home() {
         )}
       </header>
 
+      {/* MAIN CONTENT */}
       <main className="home-main">
         {!user && view === "welcome" && (
-          <>
+          <section className="welcome-section">
             <h2>Welcome to My ToDo App</h2>
-            <p>Stay organized, boost productivity, and manage your daily tasks with ease.</p>
-          </>
+            <p>
+              Stay organized, boost productivity, and manage your daily tasks with ease.
+            </p>
+          </section>
         )}
 
         {!user && view === "login" && (
-          <Login onBack={() => setView("welcome")} onLoginSuccess={handleLoginSuccess} />
+          <div className="auth-container">
+            <Login onBack={() => setView("welcome")} onLoginSuccess={handleLoginSuccess} />
+          </div>
         )}
 
         {!user && view === "register" && (
-          <Register onBack={() => setView("welcome")} />
+          <div className="auth-container">
+            <Register onBack={() => setView("welcome")} />
+          </div>
         )}
 
         {user && view === "todos" && (
-          <Todos />
+          <div className="todos-wrapper">
+            <Todos />
+          </div>
         )}
       </main>
 
+      {/* FOOTER */}
       <footer className="home-footer">
-        <p>This ToDo List helps you plan your day, set priorities, and keep track of everything in one place.</p>
+        <p>
+          This ToDo List helps you plan your day, set priorities, and keep track of
+          everything in one place.
+        </p>
       </footer>
     </div>
   );

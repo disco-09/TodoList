@@ -1,214 +1,69 @@
-/* Global styles */
-body {
+/* App.css */
+* {
   margin: 0;
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
-  background-color: #f5f6fa;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
   color: #333;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  background-color: #2c3e50;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  color: #ecf0f1;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #ecf0f1;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00b894;
+}
+
 .container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
   padding: 20px;
 }
 
-/* Navbar */
-.navbar {
-  background-color: #2d3436;
-  padding: 12px 20px;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; /* ✅ allows wrapping on small screens */
-}
-
-.navbar h1 {
-  margin: 0;
-  font-size: 20px;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  margin-left: 15px;
-  font-size: 14px;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
-}
-
-/* Form container */
-.form {
-  background: white;
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.5rem;
-}
-
-.form input {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 14px;
-}
-
-.form input:focus {
-  outline: none;
-  border-color: #0984e3;
-}
-
-.form button {
-  width: 100%;
-  padding: 12px;
-  background-color: #0984e3;
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
+button {
   cursor: pointer;
-  margin-top: 10px;
-  transition: background 0.3s ease;
 }
 
-.form button:hover {
-  background-color: #0773c5;
-}
-
-/* Dashboard Todo List */
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-ul li {
-  background: white;
-  margin: 8px 0;
-  padding: 12px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; /* ✅ support small screens */
-}
-
-ul li span {
-  font-size: 14px;
-  word-break: break-word;
-}
-
-/* Create Todo form */
-.create-todo {
-  display: flex;
-  margin-bottom: 20px;
-}
-
-.create-todo input {
-  flex: 1;
-  padding: 10px;
-  border-radius: 6px 0 0 6px;
-  border: 1px solid #ddd;
-  font-size: 14px;
-}
-
-.create-todo button {
-  padding: 10px 15px;
-  border: none;
-  background-color: #00b894;
-  color: white;
-  font-weight: bold;
-  border-radius: 0 6px 6px 0;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.create-todo button:hover {
-  background-color: #009975;
-}
-
-/* 🔹 Responsive Breakpoints */
+/* Responsive */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 15px;
   }
 
-  .navbar h1 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-
-  .navbar a {
-    font-size: 13px;
-    margin: 5px 0;
-  }
-
-  .form {
-    margin: 30px 15px;
-    padding: 20px;
-    width: 100%;
-  }
-
-  .form h2 {
-    font-size: 1.3rem;
-  }
-
-  .create-todo {
+  .nav-links {
     flex-direction: column;
-  }
-
-  .create-todo input {
-    border-radius: 6px;
-    margin-bottom: 10px;
-  }
-
-  .create-todo button {
-    border-radius: 6px;
-    width: 100%;
-  }
-
-  ul li {
-    flex-direction: column;
-    align-items: flex-start;
     gap: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar {
-    text-align: center;
-    align-items: center;
-  }
-
-  .navbar h1 {
-    font-size: 16px;
-  }
-
-  .navbar a {
-    font-size: 12px;
-    margin: 3px 5px;
-  }
-
-  .form h2 {
-    font-size: 1.2rem;
-  }
-
-  ul li span {
-    font-size: 13px;
+    margin-top: 10px;
   }
 }

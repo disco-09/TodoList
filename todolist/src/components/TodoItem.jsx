@@ -1,5 +1,6 @@
 import React from "react";
 import API from "../api";
+import "./TodoItem.css"; // ✅ Import CSS
 
 export default function TodoItem({ todo, onChange }) {
   const toggle = async () => {
@@ -12,7 +13,7 @@ export default function TodoItem({ todo, onChange }) {
   };
 
   const remove = async () => {
-    if (!confirm("Delete this?")) return;
+    if (!window.confirm("Delete this?")) return;
     try {
       await API.delete(`/todos/${todo._id}`);
       onChange();
@@ -22,12 +23,17 @@ export default function TodoItem({ todo, onChange }) {
   };
 
   return (
-    <li className="todo-item">
-      <input type="checkbox" checked={todo.completed} onChange={toggle} />
-      <span style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
-        {todo.task}
-      </span>
-      <button onClick={remove}>Delete</button>
+    <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
+      <input
+        type="checkbox"
+        checked={todo.completed}
+        onChange={toggle}
+        className="todo-checkbox"
+      />
+      <span className="todo-text">{todo.task}</span>
+      <button onClick={remove} className="todo-delete-btn">
+        Delete
+      </button>
     </li>
   );
 }

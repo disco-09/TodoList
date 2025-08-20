@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API from "../api";
+import "./Create.css"; // ✅ Import CSS
 
 export default function Create({ onCreated }) {
   const [task, setTask] = useState("");
@@ -17,13 +18,16 @@ export default function Create({ onCreated }) {
   };
 
   return (
-    <form onSubmit={submit} className="form-inline">
+    <form onSubmit={submit} className="create-form">
       <input
         value={task}
         onChange={(e) => setTask(e.target.value)}
         placeholder="New todo"
+        className="create-input"
       />
-      <button type="submit">Add</button>
+      <button type="submit" className="create-btn">
+        Add
+      </button>
     </form>
   );
 }

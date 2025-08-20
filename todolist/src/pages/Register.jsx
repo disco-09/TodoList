@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import API from "../api";
-import "./Auth.css";
+import "./Register.css";
 
 export default function Register({ onBack }) {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
@@ -19,15 +19,17 @@ export default function Register({ onBack }) {
   };
 
   return (
-    <div className="form-container">
-      <h2>Register</h2>
-      <form onSubmit={submit} className="form">
+    <div className="register-container">
+      <h2 className="register-title">Register</h2>
+
+      <form onSubmit={submit} className="register-form">
         <input
           name="name"
           placeholder="Name"
           value={form.name}
           onChange={change}
           required
+          className="register-input"
         />
         <input
           name="email"
@@ -36,6 +38,7 @@ export default function Register({ onBack }) {
           value={form.email}
           onChange={change}
           required
+          className="register-input"
         />
         <input
           name="password"
@@ -44,16 +47,13 @@ export default function Register({ onBack }) {
           value={form.password}
           onChange={change}
           required
+          className="register-input"
         />
-        <button type="submit">Register</button>
+        <button type="submit" className="register-btn">Register</button>
       </form>
 
-      {/* Back button */}
       {onBack && (
-        <button
-          style={{ marginTop: "10px", background: "gray", color: "white" }}
-          onClick={onBack}
-        >
+        <button onClick={onBack} className="back-btn">
           Back
         </button>
       )}

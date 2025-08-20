@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import API from "../api";
 import Create from "./Create";
 import TodoItem from "./TodoItem";
-import "./components.css"; // import global css
+import "./Todos.css"; // ✅ Use TodoList.css for container & list
 
 export default function Todos() {
   const [todos, setTodos] = useState([]);
@@ -21,9 +21,9 @@ export default function Todos() {
   }, []);
 
   return (
-    <div className="todos-container">
+    <div className="todo-list-container">
       <Create onCreated={fetchTodos} />
-      <ul>
+      <ul className="todo-list">
         {todos.map((todo) => (
           <TodoItem key={todo._id} todo={todo} onChange={fetchTodos} />
         ))}

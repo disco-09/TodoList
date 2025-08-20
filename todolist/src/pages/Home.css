@@ -2,12 +2,10 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
-  background: #f9fafc;
+  background: linear-gradient(135deg, #e3f2fd, #f9fafc);
   color: #333;
 }
 
-/* Top Header */
 .home-header {
   display: flex;
   justify-content: space-between;
@@ -15,28 +13,28 @@
   padding: 20px 40px;
   background-color: #4CAF50;
   color: white;
-  flex-wrap: wrap; /* allow items to wrap on small screens */
+  flex-wrap: wrap;
 }
 
 .app-name {
-  font-size: 1.8rem;
-  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .nav-links {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .nav-btn {
   background-color: white;
   color: #4CAF50;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 10px 20px;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .nav-btn:hover {
@@ -44,29 +42,42 @@
   color: white;
 }
 
-/* Main Section */
 .home-main {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
 .home-main h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
 }
 
 .home-main p {
-  font-size: 1.1rem;
-  max-width: 500px;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.7;
+  margin-bottom: 20px;
 }
 
-/* Footer */
+.cta-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #45a049;
+}
+
 .home-footer {
   padding: 15px;
   text-align: center;
@@ -75,25 +86,15 @@
   color: #555;
 }
 
-/* 🔹 Responsive Breakpoints */
+/* Responsive */
 @media (max-width: 768px) {
   .home-header {
-    padding: 15px 20px;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .app-name {
-    font-size: 1.5rem;
-  }
-
-  .nav-links {
     gap: 10px;
   }
 
   .home-main h2 {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   .home-main p {
@@ -102,18 +103,8 @@
 }
 
 @media (max-width: 480px) {
-  .home-header {
-    align-items: center;
-    text-align: center;
-  }
-
-  .app-name {
-    font-size: 1.3rem;
-  }
-
   .nav-links {
     flex-direction: column;
-    width: 100%;
     align-items: center;
   }
 
@@ -122,15 +113,7 @@
     text-align: center;
   }
 
-  .home-main {
-    padding: 20px 10px;
-  }
-
   .home-main h2 {
-    font-size: 1.4rem;
-  }
-
-  .home-main p {
-    font-size: 0.95rem;
+    font-size: 1.6rem;
   }
 }

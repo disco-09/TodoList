@@ -1,0 +1,43 @@
+.create-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.create-container form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.create-container input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.create-btn {
+  padding: 12px 18px;
+  background: #4CAF50;
+  color: white;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.create-btn:hover {
+  background: #45a049;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .create-container form {
+    flex-direction: column;
+  }
+
+  .create-btn {
+    width: 100%;
+  }
+}
