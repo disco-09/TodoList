@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import API from "../api";
 import Create from "../components/Create";
 import TodoItem from "../components/TodoItem";
+import "./Dashboard.css";
 
 export default function Dashboard() {
   const [todos, setTodos] = useState([]);

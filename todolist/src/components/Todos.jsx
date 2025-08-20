@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import API from "../api";
 import Create from "./Create";
 import TodoItem from "./TodoItem";
+import "./components.css"; // import global css
 
 export default function Todos() {
   const [todos, setTodos] = useState([]);
@@ -20,10 +21,10 @@ export default function Todos() {
   }, []);
 
   return (
-    <div>
+    <div className="todos-container">
       <Create onCreated={fetchTodos} />
-      <ul style={{ listStyle: "none", padding: 0 }}>
-        {todos.map(todo => (
+      <ul>
+        {todos.map((todo) => (
           <TodoItem key={todo._id} todo={todo} onChange={fetchTodos} />
         ))}
       </ul>

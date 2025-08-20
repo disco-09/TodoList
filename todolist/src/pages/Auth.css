@@ -1,0 +1,95 @@
+/* Container centers the form */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-color: #f5f7fa;
+  padding: 20px;
+}
+
+/* Form box */
+.form {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+}
+
+/* Heading */
+.form-container h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.6rem;
+}
+
+/* Inputs */
+.form input {
+  width: 100%;
+  padding: 10px;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Buttons */
+.form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 1rem;
+  background: #28a745;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Hover effect */
+.form button:hover {
+  background: #218838;
+}
+
+/* Back button style */
+.form-container button[style] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-container button[style]:hover {
+  opacity: 0.9;
+}
+
+/* 🔹 Responsive Breakpoints */
+@media (max-width: 600px) {
+  .form {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .form-container h2 {
+    font-size: 1.4rem;
+  }
+
+  .form input {
+    font-size: 13px;
+  }
+
+  .form button {
+    font-size: 15px;
+    padding: 9px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .form {
+    width: 400px;
+  }
+}

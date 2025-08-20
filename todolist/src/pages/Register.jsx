@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API from "../api";
+import "./Auth.css";
 
 export default function Register({ onBack }) {
   const [form, setForm] = useState({ name: "", email: "", password: "" });

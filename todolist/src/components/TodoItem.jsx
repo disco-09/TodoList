@@ -6,7 +6,9 @@ export default function TodoItem({ todo, onChange }) {
     try {
       await API.put(`/todos/${todo._id}`, { completed: !todo.completed });
       onChange();
-    } catch (err) { alert("Update failed"); }
+    } catch (err) {
+      alert("Update failed");
+    }
   };
 
   const remove = async () => {
@@ -14,13 +16,17 @@ export default function TodoItem({ todo, onChange }) {
     try {
       await API.delete(`/todos/${todo._id}`);
       onChange();
-    } catch (err) { alert("Delete failed"); }
+    } catch (err) {
+      alert("Delete failed");
+    }
   };
 
   return (
-    <li style={{ display: "flex", gap: 10, alignItems: "center" }}>
+    <li className="todo-item">
       <input type="checkbox" checked={todo.completed} onChange={toggle} />
-      <span style={{ textDecoration: todo.completed ? "line-through" : "none" }}>{todo.task}</span>
+      <span style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
+        {todo.task}
+      </span>
       <button onClick={remove}>Delete</button>
     </li>
   );

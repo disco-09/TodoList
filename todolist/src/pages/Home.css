@@ -15,6 +15,7 @@
   padding: 20px 40px;
   background-color: #4CAF50;
   color: white;
+  flex-wrap: wrap; /* allow items to wrap on small screens */
 }
 
 .app-name {
@@ -25,6 +26,7 @@
 .nav-links {
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .nav-btn {
@@ -71,4 +73,64 @@
   background-color: #eee;
   font-size: 0.9rem;
   color: #555;
+}
+
+/* 🔹 Responsive Breakpoints */
+@media (max-width: 768px) {
+  .home-header {
+    padding: 15px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .app-name {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .home-main h2 {
+    font-size: 1.6rem;
+  }
+
+  .home-main p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-header {
+    align-items: center;
+    text-align: center;
+  }
+
+  .app-name {
+    font-size: 1.3rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .nav-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .home-main {
+    padding: 20px 10px;
+  }
+
+  .home-main h2 {
+    font-size: 1.4rem;
+  }
+
+  .home-main p {
+    font-size: 0.95rem;
+  }
 }

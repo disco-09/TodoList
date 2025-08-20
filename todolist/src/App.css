@@ -6,7 +6,6 @@ body {
   color: #333;
 }
 
-/* Container */
 .container {
   max-width: 900px;
   margin: auto;
@@ -21,6 +20,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* ✅ allows wrapping on small screens */
 }
 
 .navbar h1 {
@@ -52,6 +52,7 @@ body {
 .form h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 1.5rem;
 }
 
 .form input {
@@ -79,6 +80,7 @@ body {
   border-radius: 6px;
   cursor: pointer;
   margin-top: 10px;
+  transition: background 0.3s ease;
 }
 
 .form button:hover {
@@ -89,6 +91,7 @@ body {
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 ul li {
@@ -100,10 +103,12 @@ ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* ✅ support small screens */
 }
 
 ul li span {
   font-size: 14px;
+  word-break: break-word;
 }
 
 /* Create Todo form */
@@ -117,6 +122,7 @@ ul li span {
   padding: 10px;
   border-radius: 6px 0 0 6px;
   border: 1px solid #ddd;
+  font-size: 14px;
 }
 
 .create-todo button {
@@ -127,8 +133,82 @@ ul li span {
   font-weight: bold;
   border-radius: 0 6px 6px 0;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .create-todo button:hover {
   background-color: #009975;
+}
+
+/* 🔹 Responsive Breakpoints */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .navbar h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .navbar a {
+    font-size: 13px;
+    margin: 5px 0;
+  }
+
+  .form {
+    margin: 30px 15px;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .form h2 {
+    font-size: 1.3rem;
+  }
+
+  .create-todo {
+    flex-direction: column;
+  }
+
+  .create-todo input {
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+
+  .create-todo button {
+    border-radius: 6px;
+    width: 100%;
+  }
+
+  ul li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    text-align: center;
+    align-items: center;
+  }
+
+  .navbar h1 {
+    font-size: 16px;
+  }
+
+  .navbar a {
+    font-size: 12px;
+    margin: 3px 5px;
+  }
+
+  .form h2 {
+    font-size: 1.2rem;
+  }
+
+  ul li span {
+    font-size: 13px;
+  }
 }
