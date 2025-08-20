@@ -20,35 +20,37 @@ export default function Login({ onBack, onLoginSuccess }) {
 
   return (
     <div className="login-container">
-      <h2 className="login-title">Login</h2>
+      <div className="login-box">
+        <h2 className="login-title">Login</h2>
 
-      <form onSubmit={submit} className="login-form">
-        <input
-          name="email"
-          type="email"
-          placeholder="Email"
-          value={form.email}
-          onChange={change}
-          required
-          className="login-input"
-        />
-        <input
-          name="password"
-          type="password"
-          placeholder="Password"
-          value={form.password}
-          onChange={change}
-          required
-          className="login-input"
-        />
-        <button type="submit" className="login-btn">Login</button>
-      </form>
+        <form onSubmit={submit} className="login-form">
+          <input
+            name="email"
+            type="email"
+            placeholder="Email"
+            value={form.email}
+            onChange={change}
+            required
+            className="login-input"
+          />
+          <input
+            name="password"
+            type="password"
+            placeholder="Password"
+            value={form.password}
+            onChange={change}
+            required
+            className="login-input"
+          />
+          <button type="submit" className="login-btn">Login</button>
+        </form>
 
-      {onBack && (
-        <button onClick={onBack} className="back-btn">
-          Back
-        </button>
-      )}
+        {onBack && (
+          <button onClick={onBack} className="back-btn">
+            Back
+          </button>
+        )}
+      </div>
     </div>
   );
 }
