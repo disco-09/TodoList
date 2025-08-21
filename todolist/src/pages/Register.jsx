@@ -19,7 +19,6 @@ export default function Register({ onBack }) {
   };
 
   return (
-    <div className="auth-container">
       <div className="auth-box">
         <h2>Register</h2>
 
@@ -58,6 +57,5 @@ export default function Register({ onBack }) {
           </button>
         )}
       </div>
-    </div>
   );
 }

@@ -1,15 +1,3 @@
-/* Background & Centering */
-.auth-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #f5f7fa;
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
 /* Card Box */
 .auth-box {
   background: #fff;
