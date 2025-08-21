@@ -19,7 +19,6 @@ export default function Login({ onBack, onLoginSuccess }) {
   };
 
   return (
-    <div className="login-container">
       <div className="login-box">
         <h2 className="login-title">Login</h2>
 
@@ -51,6 +50,5 @@ export default function Login({ onBack, onLoginSuccess }) {
           </button>
         )}
       </div>
-    </div>
   );
 }
