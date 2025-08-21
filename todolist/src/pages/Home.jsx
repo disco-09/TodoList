@@ -49,13 +49,13 @@ function Home() {
         )}
 
         {!user && view === "login" && (
-          <div className="auth-container">
+          <div >
             <Login onBack={() => setView("welcome")} onLoginSuccess={handleLoginSuccess} />
           </div>
         )}
 
         {!user && view === "register" && (
-          <div className="auth-container">
+          <div >
             <Register onBack={() => setView("welcome")} />
           </div>
         )}
