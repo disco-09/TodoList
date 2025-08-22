@@ -86,24 +86,3 @@
   color: #555;
 }
 
-@media (max-width: 768px) {
-  .home-header {
-    flex-direction: row;   /* Always row */
-    justify-content: center; /* Center items */
-    gap: 15px;             /* Add spacing */
-    padding: 15px 20px;
-  }
-
-  .app-name {
-    font-size: 1.5rem;
-  }
-
-  .nav-links {
-    gap: 10px;
-  }
-
-  .nav-btn {
-    padding: 8px 14px;
-    font-size: 0.9rem;
-  }
-}

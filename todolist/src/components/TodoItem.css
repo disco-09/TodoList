@@ -32,31 +32,7 @@
   opacity: 0.7;
 }
 
-/* ✅ Mobile only row-flex styles */
-@media (max-width: 600px) {
-  .todo-item {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px;
-  }
 
-  .todo-text {
-    font-size: 14px;
-    flex: 1;
-    margin: 0 8px;
-  }
-
-  .todo-checkbox {
-    transform: scale(1.2);
-    margin-right: 8px;
-  }
-
-  .todo-delete-btn {
-    font-size: 14px;
-    padding: 6px 10px;
-  }
-}
 
 
 

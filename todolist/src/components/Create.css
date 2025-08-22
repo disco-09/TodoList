@@ -32,13 +32,3 @@
   background: #45a049;
 }
 
-/* Responsive */
-@media (max-width: 480px) {
-  .create-container form {
-    flex-direction: column;
-  }
-
-  .create-btn {
-    width: 100%;
-  }
-}
