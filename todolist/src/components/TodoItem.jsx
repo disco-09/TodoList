@@ -23,7 +23,6 @@ export default function TodoItem({ todo, onChange }) {
   };
 
   return (
-     <div className="login-box">
     <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
       <input
         type="checkbox"
@@ -36,6 +35,5 @@ export default function TodoItem({ todo, onChange }) {
         Delete
       </button>
     </li>
-    </div>
   );
 }
