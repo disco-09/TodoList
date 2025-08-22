@@ -18,16 +18,17 @@ export default function Create({ onCreated }) {
   };
 
   return (
-    <form onSubmit={submit} className="create-form">
-      <input
-        value={task}
-        onChange={(e) => setTask(e.target.value)}
-        placeholder="New todo"
-        className="create-input"
-      />
-      <button type="submit" className="create-btn">
-        Add
-      </button>
-    </form>
+    <div className="create-container">
+      <form onSubmit={submit}>
+        <input
+          value={task}
+          onChange={(e) => setTask(e.target.value)}
+          placeholder="New todo"
+        />
+        <button type="submit" className="create-btn">
+          Add
+        </button>
+      </form>
+    </div>
   );
 }
