@@ -32,3 +32,25 @@
   background: #45a049;
 }
 
+/* ✅ Responsive tweaks */
+@media (max-width: 600px) {
+  .create-container form {
+    flex-wrap: nowrap; /* keep side by side */
+    gap: 6px;
+  }
+
+  .create-container input {
+    font-size: 14px;
+    padding: 10px 12px;
+    flex: 1; /* input adjusts to available space */
+    min-width: 0; /* prevent overflow */
+  }
+
+  .create-btn {
+    font-size: 14px;
+    padding: 10px 14px;
+    white-space: nowrap; /* keep text in one line */
+    flex-shrink: 0; /* button won't shrink too much */
+  }
+}
+
