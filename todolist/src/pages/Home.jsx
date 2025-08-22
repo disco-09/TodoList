@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Home.css";
 import Login from "./Login";
 import Register from "./Register";
-import Todos from "../components/Todos"; // No Create here
+import Todos from "../components/Todos";
 
 function Home() {
   const [user, setUser] = useState(null);
@@ -49,19 +49,19 @@ function Home() {
         )}
 
         {!user && view === "login" && (
-          <div >
+          <div className="login-box">
             <Login onBack={() => setView("welcome")} onLoginSuccess={handleLoginSuccess} />
           </div>
         )}
 
         {!user && view === "register" && (
-          <div >
+          <div className="login-box">
             <Register onBack={() => setView("welcome")} />
           </div>
         )}
 
         {user && view === "todos" && (
-          <div className="todos-wrapper">
+          <div className="login-box">
             <Todos />
           </div>
         )}
