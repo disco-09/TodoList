@@ -25,8 +25,26 @@
 .delete-btn:hover {
   background: #c0392b;
 }
-/* TodoItem.css */
+
+/* Completed Task */
 .todo-item.completed .todo-text {
   text-decoration: line-through;
   opacity: 0.7;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 768px) {
+  .todo-item {
+    padding: 10px 12px;
+    flex-direction: column; /* stack content for small screens */
+    align-items: flex-start;
+  }
+
+  .delete-btn {
+    width: 100%; /* full width button on small devices */
+    margin-top: 8px;
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 10px;
+  }
 }
