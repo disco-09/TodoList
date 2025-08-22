@@ -23,19 +23,21 @@ function Home() {
     <div className="home-container">
       {/* HEADER */}
       <header className="home-header">
-        <h1 className="app-name">My ToDo List</h1>
-        {user ? (
-          <nav className="nav-links">
-            <span className="user-name">{user.name}</span>
-            <button onClick={handleLogout} className="nav-btn">Logout</button>
-          </nav>
-        ) : (
-          <nav className="nav-links">
-            <button onClick={() => setView("login")} className="nav-btn">Login</button>
-            <button onClick={() => setView("register")} className="nav-btn">Register</button>
-          </nav>
-        )}
-      </header>
+  <div className="header-top">
+    <h1 className="app-name">My ToDo List</h1>
+    <nav className="nav-links">
+      {user ? (
+        <button onClick={handleLogout} className="nav-btn">Logout</button>
+      ) : (
+        <>
+          <button onClick={() => setView("login")} className="nav-btn">Login</button>
+          <button onClick={() => setView("register")} className="nav-btn">Register</button>
+        </>
+      )}
+    </nav>
+  </div>
+  {user && <span className="user-name">{user.name}</span>}
+</header>
 
       {/* MAIN CONTENT */}
       <main className="home-main">

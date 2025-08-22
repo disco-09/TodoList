@@ -86,47 +86,40 @@
   color: #555;
 }
 
-/* Mobile responsive for header (≤600px) */
 @media (max-width: 600px) {
   .home-header {
     display: flex;
-    flex-direction: column; /* stack username if present */
+    flex-direction: column;
     align-items: flex-start;
     padding: 12px 16px;
   }
 
-  /* App name + nav-links stay in same row */
-  .home-header > .app-name {
-    display: inline-block;
-    font-size: 1.4rem;
-    margin-bottom: 6px;
-  }
-
-  .nav-links {
-    display: flex;
-    flex-wrap: wrap; /* allow username to wrap */
-    gap: 8px;
-    width: 100%;
-  }
-
-  .nav-links .nav-btn {
-    order: 1;        /* buttons first in row */
-    flex-shrink: 0;  /* prevent shrinking */
-  }
-
-  .nav-links .user-name {
-    order: 2;           /* push username to next row */
-    width: 100%;        /* full width */
-    text-align: center; /* center it */
-    margin-top: 4px;
-  }
-
-  /* Ensure App name + buttons stay in one row */
-  .home-header > .app-name,
-  .nav-links {
-    flex: 1;
+  .header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+  }
+
+  .app-name {
+    font-size: 1.4rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+
+  .nav-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .user-name {
+    width: 100%;
+    text-align: center;
+    margin-top: 4px;
+    font-size: 0.9rem;
   }
 }
