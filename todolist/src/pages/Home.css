@@ -96,30 +96,28 @@
   }
 
   /* Keep App name + buttons in same row */
-  .home-header > .app-name,
-  .home-header > .nav-links {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
+  .home-header > .app-name {
     width: 100%;
+    font-size: 1.4rem;
+    margin-bottom: 6px;
   }
 
   .nav-links {
+    display: flex;
+    flex-wrap: wrap; /* allow username to wrap to next line */
     gap: 8px;
-    flex-wrap: nowrap; /* buttons stay side by side */
-  }
-
-  .nav-btn {
-    padding: 6px 12px;
-    font-size: 0.85rem;
-  }
-
-  /* Username appears below logout, centered */
-  .user-name {
-    display: block;
     width: 100%;
-    text-align: center;
+  }
+
+  .nav-links .nav-btn {
+    order: 1;       /* buttons come first */
+    flex-shrink: 0; /* prevent button from shrinking too much */
+  }
+
+  .nav-links .user-name {
+    order: 2;          /* push username to second row */
+    width: 100%;       /* full width */
+    text-align: center; /* center below logout */
     margin-top: 4px;
-    font-size: 0.9rem;
   }
 }
