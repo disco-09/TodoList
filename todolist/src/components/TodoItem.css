@@ -32,29 +32,31 @@
   opacity: 0.7;
 }
 
+/* ✅ Mobile only row-flex styles */
 @media (max-width: 600px) {
   .todo-item {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
   }
 
   .todo-text {
     font-size: 14px;
-    margin: 8px 0;
-    word-break: break-word; /* wrap long text */
-  }
-
-  .todo-delete-btn {
-    align-self: flex-end;
-    padding: 6px 12px;
-    font-size: 13px;
-    margin-top: 5px;
+    flex: 1;
+    margin: 0 8px;
   }
 
   .todo-checkbox {
-    transform: scale(1.2); /* make checkbox touch-friendly */
+    transform: scale(1.2);
+    margin-right: 8px;
+  }
+
+  .todo-delete-btn {
+    font-size: 14px;
+    padding: 6px 10px;
   }
 }
+
 
 
