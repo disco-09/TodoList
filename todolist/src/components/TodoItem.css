@@ -26,25 +26,28 @@
   background: #c0392b;
 }
 
-/* Completed Task */
+/* Completed task style */
 .todo-item.completed .todo-text {
   text-decoration: line-through;
   opacity: 0.7;
 }
 
-/* ✅ Responsive adjustments */
-@media (max-width: 768px) {
+/* ✅ Responsive Design */
+@media (max-width: 600px) {
   .todo-item {
-    padding: 10px 12px;
-    flex-direction: column; /* stack content for small screens */
+    flex-direction: column;
     align-items: flex-start;
+    padding: 10px 14px;
+  }
+
+  .todo-text {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
   }
 
   .delete-btn {
-    width: 100%; /* full width button on small devices */
-    margin-top: 8px;
-    text-align: center;
-    font-size: 0.85rem;
-    padding: 10px;
+    align-self: flex-end;
+    padding: 6px 12px;
+    font-size: 0.8rem;
   }
 }

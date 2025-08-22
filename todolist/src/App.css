@@ -1,16 +1,15 @@
-/* global.css */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
-}
+/* App.css (global.css) */
 
+/* Prevent content touching screen edges */
 .container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 1rem;
 }
 
+/* Mobile padding fix */
 @media (max-width: 768px) {
-  body {
-    font-size: 14px;
+  .container {
+    padding: 0.5rem;
   }
 }
