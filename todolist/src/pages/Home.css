@@ -86,38 +86,41 @@
   color: #555;
 }
 
-/* Mobile responsive for existing header (≤600px) */
+/* Mobile responsive for header (≤600px) */
 @media (max-width: 600px) {
   .home-header {
     display: flex;
-    flex-direction: column; /* stack username if present */
+    flex-direction: column; /* allow username to move down */
     align-items: flex-start;
     padding: 12px 16px;
   }
 
-  /* Keep App name + buttons in same row */
+  /* Force App name + buttons to stay in one row */
+  .home-header > .app-name,
+  .home-header > .nav-links {
+    display: flex;
+    align-items: center;
+  }
+
   .home-header > .app-name {
-    width: 100%;
+    flex: 1; /* take available space */
     font-size: 1.4rem;
-    margin-bottom: 6px;
   }
 
   .nav-links {
-    display: flex;
-    flex-wrap: wrap; /* allow username to wrap to next line */
     gap: 8px;
-    width: 100%;
+    flex-wrap: wrap; /* allow username to wrap to next line */
   }
 
   .nav-links .nav-btn {
-    order: 1;       /* buttons come first */
-    flex-shrink: 0; /* prevent button from shrinking too much */
+    order: 1;       /* buttons stay first in row */
+    flex-shrink: 0; /* prevent shrinking */
   }
 
   .nav-links .user-name {
-    order: 2;          /* push username to second row */
-    width: 100%;       /* full width */
-    text-align: center; /* center below logout */
+    order: 2;           /* move username below button */
+    width: 100%;
+    text-align: center; /* center on second row */
     margin-top: 4px;
   }
 }
