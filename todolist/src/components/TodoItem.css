@@ -32,22 +32,29 @@
   opacity: 0.7;
 }
 
-/* ✅ Responsive Design */
+/* ✅ Responsive CSS */
 @media (max-width: 600px) {
   .todo-item {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 14px;
+    display: flex;
+    flex-direction: row;   /* keep everything in a row */
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;     /* prevent wrapping */
   }
 
-  .todo-text {
-    margin-bottom: 8px;
-    font-size: 0.95rem;
+  .todo-item input[type="checkbox"] {
+    flex-shrink: 0;  /* checkbox won't shrink */
+    margin-right: 8px;
   }
 
-  .delete-btn {
-    align-self: flex-end;
-    padding: 6px 12px;
-    font-size: 0.8rem;
+  .todo-item span {
+    flex: 1;          /* task text takes remaining space */
+    word-break: break-word;
+  }
+
+  .todo-item button {
+    flex-shrink: 0;   /* delete button fixed size */
+    margin-left: 8px;
   }
 }
+
