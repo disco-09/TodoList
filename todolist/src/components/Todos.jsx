@@ -21,6 +21,7 @@ export default function Todos() {
   }, []);
 
   return (
+    <div className="login-box">
     <div className="todo-list-container">
       <Create onCreated={fetchTodos} />
       <ul className="todo-list">
@@ -29,5 +30,6 @@ export default function Todos() {
         ))}
       </ul>
     </div>
+   </div>
   );
 }
