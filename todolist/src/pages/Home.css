@@ -86,3 +86,38 @@
   color: #555;
 }
 
+/* ✅ Mobile Responsive (≤600px) */
+@media (max-width: 600px) {
+  .home-header {
+    flex-wrap: nowrap; /* keep in one row */
+    padding: 12px 16px;
+  }
+
+  .app-name {
+    font-size: 1.4rem;
+  }
+
+  .nav-links {
+    gap: 8px;
+    flex-wrap: nowrap; /* prevent wrapping */
+  }
+
+  .nav-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .home-main h2 {
+    font-size: 1.6rem;
+  }
+
+  .home-main p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .cta-btn {
+    padding: 10px 16px;
+    font-size: 1rem;
+  }
+}
