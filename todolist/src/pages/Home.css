@@ -90,37 +90,43 @@
 @media (max-width: 600px) {
   .home-header {
     display: flex;
-    flex-direction: column; /* allow username to move down */
+    flex-direction: column; /* stack username if present */
     align-items: flex-start;
     padding: 12px 16px;
   }
 
-  /* Force App name + buttons to stay in one row */
-  .home-header > .app-name,
-  .home-header > .nav-links {
-    display: flex;
-    align-items: center;
-  }
-
+  /* App name + nav-links stay in same row */
   .home-header > .app-name {
-    flex: 1; /* take available space */
+    display: inline-block;
     font-size: 1.4rem;
+    margin-bottom: 6px;
   }
 
   .nav-links {
+    display: flex;
+    flex-wrap: wrap; /* allow username to wrap */
     gap: 8px;
-    flex-wrap: wrap; /* allow username to wrap to next line */
+    width: 100%;
   }
 
   .nav-links .nav-btn {
-    order: 1;       /* buttons stay first in row */
-    flex-shrink: 0; /* prevent shrinking */
+    order: 1;        /* buttons first in row */
+    flex-shrink: 0;  /* prevent shrinking */
   }
 
   .nav-links .user-name {
-    order: 2;           /* move username below button */
-    width: 100%;
-    text-align: center; /* center on second row */
+    order: 2;           /* push username to next row */
+    width: 100%;        /* full width */
+    text-align: center; /* center it */
     margin-top: 4px;
+  }
+
+  /* Ensure App name + buttons stay in one row */
+  .home-header > .app-name,
+  .nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
