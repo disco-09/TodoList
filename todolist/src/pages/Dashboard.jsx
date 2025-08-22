@@ -22,6 +22,7 @@ export default function Dashboard() {
   }, []);
 
   return (
+  <div className="login-box">
     <div className="dashboard">
       <h2>Your Todos</h2>
       <div className="todo-create">
@@ -33,5 +34,6 @@ export default function Dashboard() {
         ))}
       </ul>
     </div>
+  </div>
   );
 }
