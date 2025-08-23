@@ -23,21 +23,21 @@ function Home() {
     <div className="home-container">
       {/* HEADER */}
       <header className="home-header">
-  <div className="header-top">
-    <h1 className="app-name">My ToDo List</h1>
-    <nav className="nav-links">
-      {user ? (
-        <button onClick={handleLogout} className="nav-btn">Logout</button>
-      ) : (
-        <>
-          <button onClick={() => setView("login")} className="nav-btn">Login</button>
-          <button onClick={() => setView("register")} className="nav-btn">Register</button>
-        </>
-      )}
-    </nav>
-  </div>
-  {user && <span className="user-name">{user.name}</span>}
-</header>
+        <div className="header-top">
+          <h1 className="app-name">My ToDo List</h1>
+          <nav className="nav-links">
+            {user ? (
+              <button onClick={handleLogout} className="nav-btn">Logout</button>
+            ) : (
+              <>
+                <button onClick={() => setView("login")} className="nav-btn">Login</button>
+                <button onClick={() => setView("register")} className="nav-btn">Register</button>
+              </>
+            )}
+          </nav>
+        </div>
+        {user && <span className="user-name">Welcome, {user.name}</span>}
+      </header>
 
       {/* MAIN CONTENT */}
       <main className="home-main">
@@ -49,24 +49,19 @@ function Home() {
             </p>
           </section>
         )}
-       <div className="app-container">
-        {!user && view === "login" && (
-        
+
+        <div className="app-container">
+          {!user && view === "login" && (
             <Login onBack={() => setView("welcome")} onLoginSuccess={handleLoginSuccess} />
-         
-        )}
+          )}
 
-        {!user && view === "register" && (
-          
+          {!user && view === "register" && (
             <Register onBack={() => setView("welcome")} />
-          
-        )}
+          )}
 
-        {user && view === "todos" && (
-          
-            <Todos />
-          
-        )}
+          {user && view === "todos" && (
+            <Todos user={user} />   
+          )}
         </div>
       </main>
 
