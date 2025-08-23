@@ -169,9 +169,6 @@ html, body {
   width: 100%;
   margin-bottom: 20px;
 }
-
-/* -------------------- MOBILE -------------------- */
-/* ------------------- MOBILE CSS ------------------- */
 @media (max-width: 600px) {
 
   /* Home container */
@@ -183,7 +180,7 @@ html, body {
     min-height: 100vh;
     padding: 10px;
     box-sizing: border-box;
-    overflow-x: hidden; /* prevent horizontal scroll */
+    overflow-x: hidden;
   }
 
   /* Header */
@@ -195,10 +192,10 @@ html, body {
   }
 
   .header-top {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
   }
 
   .app-name {
@@ -207,15 +204,9 @@ html, body {
   }
 
   .nav-links {
-    display: flex;
-    gap: 8px;
     flex-wrap: wrap;
     justify-content: center;
-  }
-
-  .nav-btn {
-    padding: 6px 12px;
-    font-size: 0.85rem;
+    gap: 8px;
   }
 
   .user-name {
@@ -225,27 +216,16 @@ html, body {
     font-size: 0.9rem;
   }
 
-  /* Main content / Welcome section */
+  /* Main section wrapper */
   .home-main {
     width: 100%;
     padding: 20px 10px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .welcome-section {
-    padding: 20px 10px;
-  }
-
-  .welcome-section h2 {
-    font-size: 22px;
-  }
-
-  .welcome-section p {
-    font-size: 14px;
-    line-height: 1.4;
-  }
-
-  /* App container (login/register/todos) */
+  /* Outer wrappers for login/register/todos */
   .app-container {
     width: 100%;
     max-width: 95%;
@@ -255,41 +235,18 @@ html, body {
     align-items: center;
   }
 
-  /* Login / Register boxes */
-  .login-box, .auth-box, .create-container {
+  .login-box, .auth-box, .todos-container {
     width: 100%;
     max-width: 100%;
     margin: 10px 0;
-  }
-
-  .login-input, .auth-box input, .create-container input {
-    padding: 10px 8px;
-    font-size: 14px;
-  }
-
-  .login-btn, .back-btn, .auth-btn, .create-btn {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  /* Todos list */
-  .todos-container, .todo-item {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .todo-item {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .todo-text {
-    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers the boxes without touching inner content */
   }
 
   /* Footer */
   .home-footer {
+    width: 100%;
     font-size: 12px;
     padding: 12px 8px;
     text-align: center;
