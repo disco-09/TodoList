@@ -145,15 +145,19 @@
     line-height: 1.4;
   }
 
-  .app-container {
+  .create-container input {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .create-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+   .app-container {
     padding: 15px 10px;
   }
-}
 
-/* Optional: make each child component full width */
-.app-container > * {
-  width: 100%;
-  margin-bottom: 20px;
-}
 }
 
