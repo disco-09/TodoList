@@ -73,22 +73,34 @@
 
 @media (max-width: 600px) {
   .login-box {
-    padding: 20px 15px;
-    margin: 40px auto;
+    width: 90%;
+    max-width: 300px;
+    margin: auto;              /* center horizontally and vertically */
+    padding: 15px 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .login-title {
-    font-size: 22px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
   }
 
   .login-input {
-    padding: 10px 8px;
+    width: 100%;
+    padding: 8px;
     font-size: 14px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
   }
 
   .login-btn, .back-btn {
+    width: 100%;
     padding: 10px;
     font-size: 14px;
+    margin-top: 8px;
   }
 }
