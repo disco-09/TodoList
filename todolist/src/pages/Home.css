@@ -47,6 +47,7 @@ html, body {
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s ease;
+  margin-right: 8px; 
 }
 
 .nav-btn:hover {
@@ -184,6 +185,7 @@ html, body {
   .nav-btn {
     padding: 6px 12px;
     font-size: 0.85rem;
+    margin-right: 0px; 
   }
 
   .user-name {
