@@ -71,21 +71,24 @@
   background: #bbb;
 }
 
-/* 📱 Mobile Responsiveness */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .login-box {
-    padding: 25px;
-    max-width: 100%;
+    padding: 20px 15px;
+    margin: 40px auto;
   }
 
-  .login-box h2 {
-    font-size: 1.5rem;
+  .login-title {
+    font-size: 22px;
+    margin-bottom: 20px;
   }
 
-  .login-box input,
-  .login-btn,
-  .back-btn {
-    font-size: 1rem;
+  .login-input {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+
+  .login-btn, .back-btn {
     padding: 10px;
+    font-size: 14px;
   }
 }

@@ -122,4 +122,27 @@
     margin-top: 4px;
     font-size: 0.9rem;
   }
+
+  .home-footer {
+    font-size: 12px; /* Smaller text on mobile */
+    padding: 12px 8px;
+  }
+
+  .home-footer p {
+    margin: 0;
+    line-height: 1.4; /* Easier to read on small screens */
+  }
+   .welcome-section {
+    padding: 40px 15px;
+  }
+
+  .welcome-section h2 {
+    font-size: 24px; /* Smaller title */
+  }
+
+  .welcome-section p {
+    font-size: 14px; /* Smaller paragraph */
+    line-height: 1.4;
+  }
 }
+

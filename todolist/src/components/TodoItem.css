@@ -32,7 +32,28 @@
   opacity: 0.7;
 }
 
+@media (max-width: 600px) {
+  .todo-item {
+    flex-direction: row; /* Keep in a row */
+    align-items: center;
+    padding: 10px 12px;
+  }
 
+  .todo-checkbox {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+
+  .todo-text {
+    font-size: 14px;
+  }
+
+  .todo-delete-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
 
 
 

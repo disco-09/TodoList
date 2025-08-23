@@ -46,3 +46,22 @@
   transform: scale(1.02);
 }
 
+@media (max-width: 600px) {
+  .todos-container {
+    padding: 20px 10px;
+  }
+
+  .todos-box {
+    width: 100%;
+    padding: 20px 15px;
+  }
+
+  .todos-box h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .todo-create {
+    margin-bottom: 15px;
+  }
+}
