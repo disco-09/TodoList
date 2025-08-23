@@ -36,7 +36,6 @@ function Home() {
             )}
           </nav>
         </div>
-        {user && <span className="user-name">Welcome, {user.name}</span>}
       </header>
 
       {/* MAIN CONTENT */}
