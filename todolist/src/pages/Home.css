@@ -1,3 +1,10 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* remove scroll */
+}
+
 .home-container {
   display: flex;
   flex-direction: column;
@@ -222,7 +229,7 @@
   }
 
   .app-container {
-      display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center; /* vertical center */
     align-items: center;     /* horizontal center */
