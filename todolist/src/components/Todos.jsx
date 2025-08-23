@@ -23,6 +23,7 @@ export default function Todos() {
   return (
     <div className="todos-container">
       <div className="todos-box">
+       <h1> {user && <span className="user-name">{user.name}</span>}</h1>
         <h2>Your Todos</h2>
         <div className="todo-create">
           <Create onCreated={fetchTodos} />
