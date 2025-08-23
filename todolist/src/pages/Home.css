@@ -161,7 +161,6 @@
 }
 
 /* -------------------- MOBILE -------------------- */
-/* -------------------- MOBILE -------------------- */
 @media (max-width: 600px) {
   .home-header {
     flex-direction: row;
@@ -222,7 +221,7 @@
     font-size: 14px;
   }
 
-  /* Center Login/Register/Todos */
+  /* Center and shrink Login/Register/Todos */
   .home-main {
     display: flex;
     flex-direction: column;
@@ -234,13 +233,15 @@
   }
 
   .app-container {
-    width: 100%;
-    max-width: 400px; /* smaller for mobile */
+    width: 90%;           /* smaller than before */
+    max-width: 300px;     /* decreased container width */
     margin: 0 auto;
-    padding: 20px 10px;
+    padding: 15px 10px;   /* less padding */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 8px;   /* optional: rounded edges */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* optional: subtle shadow */
   }
 }
