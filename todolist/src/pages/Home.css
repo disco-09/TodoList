@@ -241,7 +241,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;   /* optional: rounded edges */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* optional: subtle shadow */
   }
 }
