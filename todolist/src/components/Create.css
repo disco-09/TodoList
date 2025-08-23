@@ -32,25 +32,42 @@
   background: #45a049;
 }
 
-/* ✅ Responsive tweaks */
 @media (max-width: 600px) {
+  /* Create container wrapper */
+  .create-container {
+    width: 100%;
+    padding: 15px 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+
+  /* Form layout */
   .create-container form {
-    flex-wrap: nowrap; /* keep side by side */
+    display: flex;
+    flex-direction: row; /* keep input and button in a row */
     gap: 6px;
+    width: 100%;
   }
 
+  /* Input field */
   .create-container input {
-    font-size: 14px;
+    flex: 1;
     padding: 10px 12px;
-    flex: 1; /* input adjusts to available space */
-    min-width: 0; /* prevent overflow */
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    min-width: 0; /* prevent overflow on small screens */
+    box-sizing: border-box;
   }
 
+  /* Add button */
   .create-btn {
-    font-size: 14px;
     padding: 10px 14px;
-    white-space: nowrap; /* keep text in one line */
+    font-size: 14px;
+    border-radius: 6px;
     flex-shrink: 0; /* button won't shrink too much */
+    white-space: nowrap; /* text stays in one line */
   }
 }
+
 

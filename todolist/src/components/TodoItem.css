@@ -33,27 +33,40 @@
 }
 
 @media (max-width: 600px) {
+  /* Todo item wrapper */
   .todo-item {
-    flex-direction: row; /* Keep in a row */
+    flex-direction: row; /* Keep items in a row */
     align-items: center;
+    justify-content: space-between;
     padding: 10px 12px;
+    margin: 6px 0;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
   }
 
+  /* Checkbox adjustments */
   .todo-checkbox {
     width: 16px;
     height: 16px;
     margin-right: 8px;
+    flex-shrink: 0;
   }
 
+  /* Todo text */
   .todo-text {
     font-size: 14px;
+    flex: 1;
+    word-break: break-word; /* prevent overflow */
   }
 
+  /* Delete button */
   .todo-delete-btn {
     padding: 5px 10px;
     font-size: 12px;
+    border-radius: 5px;
   }
 }
+
 
 
 

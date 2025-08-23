@@ -47,21 +47,35 @@
 }
 
 @media (max-width: 600px) {
+  /* Outer container padding */
   .todos-container {
-    padding: 20px 10px;
+    width: 100%;
+    padding: 15px 10px;
+    box-sizing: border-box;
   }
 
+  /* Todos box wrapper */
   .todos-box {
     width: 100%;
-    padding: 20px 15px;
+    max-width: 100%;
+    padding: 15px 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers the box without changing inner content */
+    box-sizing: border-box;
   }
 
+  /* Todos header */
   .todos-box h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
   }
 
+  /* Create new todo section wrapper */
   .todo-create {
+    width: 100%;
     margin-bottom: 15px;
   }
 }
