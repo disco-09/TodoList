@@ -49,7 +49,7 @@ function Home() {
             </p>
           </section>
         )}
-       <div className="app-container">
+       
         {!user && view === "login" && (
         
             <Login onBack={() => setView("welcome")} onLoginSuccess={handleLoginSuccess} />
@@ -67,7 +67,6 @@ function Home() {
             <Todos />
           
         )}
-        </div>
       </main>
 
       {/* FOOTER */}
