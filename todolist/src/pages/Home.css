@@ -1,21 +1,11 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden; /* remove scroll */
-}
 .home-container {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical center */
-  align-items: center;     /* horizontal center */
   min-height: 100vh;
-  width: 100%;
-  box-sizing: border-box;
   background: linear-gradient(135deg, #e3f2fd, #f9fafc);
   color: #333;
-  overflow: hidden; /* prevents scrolling */
 }
+
 .home-header {
   display: flex;
   justify-content: space-between;
@@ -26,13 +16,6 @@ html, body {
   flex-wrap: wrap;
 }
 
-.header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
 .app-name {
   font-size: 2rem;
   font-weight: bold;
@@ -41,7 +24,7 @@ html, body {
 .nav-links {
   display: flex;
   gap: 20px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .nav-btn {
@@ -103,69 +86,42 @@ html, body {
   color: #555;
 }
 
-.welcome-section {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #f0f4f8;
-  color: #333;
-}
+@media (max-width: 600px) {
+  .home-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+  }
 
-.welcome-section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 
-.welcome-section p {
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto;
-}
+  .app-name {
+    font-size: 1.4rem;
+  }
 
-.create-container {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto 20px auto;
-  padding: 0 15px;
-}
+  .nav-links {
+    display: flex;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
 
-.create-container form {
-  display: flex;
-  gap: 10px;
-}
+  .nav-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
 
-.create-container input {
-  flex: 1;
-  padding: 12px 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
+  .user-name {
+    width: 100%;
+    text-align: center;
+    margin-top: 4px;
+    font-size: 0.9rem;
+  }
 
-.create-btn {
-  padding: 10px 15px;
-  font-size: 16px;
-  border: none;
-  border-radius: 6px;
-  background-color: #4CAF50;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.create-btn:hover {
-  background-color: #45a049;
-}
-
-.app-container {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px 15px;
-  box-sizing: border-box;
-}
-
-.app-container > * {
-  width: 100%;
-  margin-bottom: 20px;
+  
 }
